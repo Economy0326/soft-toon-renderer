@@ -1,11 +1,11 @@
 # Soft Toon Renderer
 
-OpenCV를 이용하여 입력 이미지를 부드러운 만화 스타일로 변환하는 프로그램입니다.  
-이미지의 색상을 단순화하고 외곽선을 추출한 뒤, 채도와 색온도를 조절하여 따뜻하고 부드러운 분위기를 표현하도록 구현했습니다.
+- OpenCV를 이용하여 입력 이미지를 부드러운 만화 스타일로 변환하는 프로그램입니다.  
+- 이미지의 색상을 단순화하고 외곽선을 추출한 뒤, 채도와 색온도를 조절하여 따뜻하고 부드러운 분위기를 표현하도록 구현했습니다.
 
 ## 실행 방법
 
-아래 명령어를 터미널에서 실행하면 결과 이미지를 생성할 수 있습니다.
+- 아래 명령어를 터미널에서 실행하면 결과 이미지를 생성할 수 있습니다.
 
 ```bash
 python cartoonize.py --input input/good.jpg --output output/good_result.png
@@ -14,7 +14,7 @@ python cartoonize.py --input input/bad.jpg --output output/bad_result.png
 
 ## 알고리즘 설명
 
-본 프로그램은 다음과 같은 순서로 이미지를 처리합니다.
+- 본 프로그램은 다음과 같은 순서로 이미지를 처리합니다.
 
 1) bilateral filter를 반복 적용하여 이미지 내부를 부드럽게 만듭니다.
 2) k-means 기반 color quantization을 사용하여 색의 수를 줄이고 평면적인 색감을 만듭니다.
@@ -50,6 +50,8 @@ python cartoonize.py --input input/bad.jpg --output output/bad_result.png
 - 이미지마다 적절한 파라미터 조정이 필요하며, 모든 이미지에서 동일하게 좋은 결과를 보장하지는 않습니다.
 
 ## 파일 구성
+
+```
 soft-toon-renderer/
 ├─ input/
 │  ├─ good.jpg
@@ -60,6 +62,7 @@ soft-toon-renderer/
 │  ├─ bad_result.png
 │  └─ bad_result_compare.png
 └─ cartoonize.py
+```
 
 ## 결론
 
